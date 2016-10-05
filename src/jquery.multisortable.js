@@ -1,5 +1,14 @@
 /**
  * jquery.multisortable.js
+ * https://github.com/shvetsgroup/jquery.multisortable
+ *
+ * Author: Ethan Atlakson, Jay Hayes, Gabriel Such, Alexander Shvets
+ * Last Revision 3/16/2012
+ * multi-selectable, multi-sortable jQuery plugin
+ */
+
+/**
+ * jquery.multisortable.js
  * https://github.com/itmammoth/jquery.multisortable Forked from https://github.com/FeepingCreature/jquery.multisortable
  */
 
