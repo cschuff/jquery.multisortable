@@ -267,6 +267,7 @@
 
 			options.receive = function(event, ui) {
 				regroup(ui.item, ui.sender);
+        ui.item = ui.item.add(ui.item.siblings(".sapMLIBSelected"));
 				settings.receive(event, ui);
 			};
 
