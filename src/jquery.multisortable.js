@@ -205,8 +205,15 @@
 				regroup(ui.item, ui.item.parent());
 			};
 
+      options.update = function(event, ui) {
+        regroup(ui.item, ui.item.parent());
+        ui.item = ui.item.add(ui.item.siblings(".sapMLIBSelected"));
+        settings.update(event, ui);
+      };
+
 			options.stop = function(event, ui) {
 				regroup(ui.item, ui.item.parent());
+        ui.item = ui.item.add(ui.item.siblings(".sapMLIBSelected"));
 				settings.stop(event, ui);
 			};
 
