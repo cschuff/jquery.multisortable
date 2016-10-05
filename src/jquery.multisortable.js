@@ -9,7 +9,7 @@
 
 /**
  * jquery.multisortable.js
- * https://github.com/itmammoth/jquery.multisortable Forked from https://github.com/FeepingCreature/jquery.multisortable
+ * https://github.com/cschuff/jquery.multisortable Forked from https://github.com/itmammoth/jquery.multisortable
  */
 
 !function($) {
