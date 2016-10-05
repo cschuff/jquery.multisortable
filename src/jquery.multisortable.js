@@ -185,12 +185,18 @@
 			options.placeholder = settings.placeholder;
 			options.start = function(event, ui) {
 				if (ui.item.hasClass(settings.selectedClass)) {
-					var parent = ui.item.parent();
+          var parent = ui.item.parent(),
+              isMulti = false;
 
 					//assign indexes to all selected items
 					parent.find('.' + settings.selectedClass).each(function(i) {
 						$(this).data('i', i);
+            if (i > 0) {
+              isMulti = true;
+            }
 					});
+
+          ui.item.data('multi', isMulti);
 
 					// adjust placeholder size to be size of items
 					var height = parent.find('.' + settings.selectedClass).length * ui.item.outerHeight();
