@@ -64,9 +64,7 @@
 			}
 
 			if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
-				// no - selection is global, not local
-				// parent.find('.multiselectable-previous').removeClass('multiselectable-previous');
-				$('.multiselectable-previous').removeClass('multiselectable-previous');
+        parent.find('.multiselectable-previous').removeClass('multiselectable-previous');
 				if (!item.hasClass(options.selectedClass)) {
 					parent.find('.' + options.selectedClass).removeClass(options.selectedClass);
 					item.addClass(options.selectedClass).addClass('multiselectable-previous');
@@ -75,6 +73,11 @@
 					}
 				}
 			}
+
+
+      // remove any selection in other multisortables in the DOM
+      $('.ui-sortable').not(parent).find('.multiselectable-previous').removeClass('multiselectable-previous');
+      $('.ui-sortable').not(parent).find('.' + options.selectedClass).removeClass(options.selectedClass);
 
 			options.mousedown(e, item);
 		}
